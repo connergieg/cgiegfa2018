@@ -3,46 +3,9 @@ body {
     color: gray;
 }
 
-header, main, nav, footer {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-/*main {*/
-/*    width: 70%;*/
-/*    margin: 0 auto;*/
-/*}*/
-
-nav a {
-    padding: 15px;
-    padding-bottom: 4px;
-    font-size: 1.8em;
-    text-decoration: none;
-    color: white;
-}
-
-nav a:hover {
-    border-bottom: 2px solid orange;
-    font-size: 2em;
-    transition: 0.9s;
-}
-
-.currPage {
-    border-bottom: 2px solid orange;
-}
-
-#me, #welcomeText {
-    float: left;
-}
-
-#welcomeText {
-    text-align: left;
-}
-
 table {
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 0px auto;
+    margin-top: 40px;
 }
 
 td {
@@ -50,30 +13,13 @@ td {
     font-size: 1.3em;
 }
 
-td strong {
-    color: orange;
+td strong, .table-row {
+    color: #0049FF;
+    text-align: center;
 }
 
-#table-header {
-    background-color: #351a00;
-}
-
-.table-row {
-    background-color: #753900;
-}
-
-iframe {
-    display: block;
-}
-
-#contactForm {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-hr {
-    width: 60%;
+#table-header, .table-row {
+    background-color: #C0E8FF;
 }
 
 ul {
@@ -82,14 +28,86 @@ ul {
     margin-top: 20px;
 }
 
-ul li {
-    margin-top: 10px;
+#contactForm {
+    margin-top: 40px;
+    text-align: center;
+}
+
+header {
+    font-family: "Rock Salt";
+    text-shadow: 2px 1px purple;
+}
+
+header, nav {
+    text-align: center;
+}
+
+nav a {
+    color: gray;
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+nav a:hover, .current
+{
+    border-bottom: 2px solid #00FF3E;
+    font-size: 2em;
+    transition: 0.9s;
 }
 
 .hobby {
-    color: green;
+    color: orange;
+}
+
+hr {
+    width: 60%;
+}
+
+main {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#me img {
+    border-radius: 50px;
+}
+
+#me, #welcomeText {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#welcomeText {
+    text-align: left;
+    font-size: 1.3em;
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+    padding-right: 30px;
+    color: white;
 }
 
 footer {
+    text-align: center;
+}
+
+#csumbLogo, #footerText
+{
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#footerText
+{
+    text-align: left;
+}
+
+footer {
+    margin-top: 40px;
     clear: left;
 }

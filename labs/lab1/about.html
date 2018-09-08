@@ -15,6 +15,7 @@ in html
        <meta charset="utf-8">
        <title> Conner Gieg's Personal Website </title>
        <link href="css/styles.css" rel="stylesheet" type="text/css">
+       <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Russo+One" rel="stylesheet">
     </head>
 <!-- closing head -->
 
@@ -24,14 +25,13 @@ in html
         
         <header>
             <h1> Conner Gieg </h1> <!-- block tag -->
-            <h2> Personal Portfolio </h2>
         </header>
         
         <hr>
         
         <nav>
             <a href="index.html">Home</a> <!-- inline tag -->
-            <a href="about.html" class="currPage">About</a>
+            <a href="about.html" class="current">About</a>
             <a href="contact.html">Contact</a>
         </nav>
         
@@ -69,10 +69,15 @@ in html
         <!-- The footer goes inside the body but not always -->
         <footer>
             <hr>
-            CST336 Internet Programming. 2018&copy; Gieg <br>
-            <strong>Disclaimer:</strong> The information in this page 
-            is fictitous. <br>
-            It is used for academic purposes only.
+            <figure id="csumbLogo">
+                <a href="https://csumb.edu/"><img src="../../img/csumb_logo.png" alt="CSUMB logo"></a>
+            </figure>
+            <div id="footerText">
+                CST336 Internet Programming. 2018&copy; Gieg <br>
+                <strong>Disclaimer:</strong> The information in this page 
+                is fictitous. <br>
+                It is used for academic purposes only. <br>
+            </div>
         </footer>
         <!-- closing footer -->
         
