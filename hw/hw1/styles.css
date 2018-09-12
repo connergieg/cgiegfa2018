@@ -1,0 +1,113 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header, nav {
+    text-align: center;
+}
+
+#content  {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    color: gray;
+    clear: left;
+}
+
+h1 {
+    color: lightgreen;
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+    text-shadow: 4px 4px purple;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: blueviolet
+}
+
+nav a {
+    padding: 5px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    color: gold;
+    text-decoration: none;
+}
+
+nav a:hover, #current {  /*pseudo class*/
+     border-bottom: 5px blue solid;
+     font-size: 2em;
+     transition: .9s;
+}
+
+#profilePic {
+    opacity: 0.75;
+}
+
+aside {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.3em;
+    margin-left: 30px;
+    font-size: 1.3em;
+    width: 300px;
+    line-height: 1.5;
+}
+
+hr {
+    width: 50%;
+}
+
+#csumbLogo {
+    margin-right: 20px;
+}
+
+#footerText {
+    text-align: left;
+    color: gray;
+}
+
+#csumbLogo, #footerText {
+    float: left;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#bottomLine {
+    margin-top: 20px;
+}
+
+#topLine {
+    margin-bottom: 20px;
+}
+
+#formSection {
+    text-align: center;
+}
+
+#sourceLink {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#source {
+    font-size: 1.3em;
+    color: pink;
+    text-decoration: none;
+}
+
+#source:hover {
+    font-size: 2em;
+    color: pink;
+    text-decoration: underline;
+    text-decoration-color: lightgreen;
+}

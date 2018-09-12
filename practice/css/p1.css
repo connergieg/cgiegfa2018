@@ -1,0 +1,15 @@
+body {
+    font-family: "Hind";
+}
+
+header {
+    background-color: #002a4e;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.major {
+    display: inline-block;
+}
