@@ -28,16 +28,16 @@
             $winnerPoints = $playerSums[0] + $playerSums[1];
             if ($playerSums[0] > $playerSums[1]) {
                 $player = "Player 1 ";
-                $winner = "red";
+                $color = "red";
             }
             else {
                 $player = "Player 2 ";
-                $winner = "blue";
+                $color = "blue";
             }
             
-            echo "<h2 class='$winner'>$player wins $winnerPoints points</h2>";
+            echo "<h2 class='$color result'>$player wins $winnerPoints points</h2>";
         } else {
-            echo "<h2 class='tie'>Tie</h2>";
+            echo "<h2 class='tie result'>Tie</h2>";
         }
     }
 ?>

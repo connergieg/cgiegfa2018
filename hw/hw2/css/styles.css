@@ -43,6 +43,10 @@ h3 {
     color: yellow;
 }
 
+.result {
+    font-style: italic;
+}
+
 #csumbLogo {
     margin-top: 0px;
     margin-right: 20px;
