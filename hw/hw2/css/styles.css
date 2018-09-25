@@ -1,0 +1,60 @@
+body {
+    background-image: url("../img/dice_back.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    background-color: gray;
+    color: black;
+    font-family: arial;
+}
+
+header, #main, #winnerPts {
+    text-align: center;
+}
+
+header {
+    color: lightgray;
+    font-size: 1.5em;
+    font-family: "Paytone One";
+}
+
+h3 {
+    text-shadow: 1px 1px black;
+    display: inline;
+}
+
+#main {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#winnerPts {
+    color: black;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.tie {
+    color: yellow;
+}
+
+#csumbLogo {
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+hr {
+    border-style: dotted;
+    width: 40%;
+}
+
+footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
