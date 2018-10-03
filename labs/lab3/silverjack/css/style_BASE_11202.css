@@ -1,0 +1,45 @@
+body {
+    background-image: url();
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+header {
+    text-align:center;
+    background-color:#6495ed;
+    font-size: 4em;
+}
+.silverjack {
+    width: 800px;
+    overflow: auto;
+    padding: 20px 30px;
+    margin: auto;
+    text-align:center;
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+.p1, .p2, .p3, .p4 {
+    text-align:left;
+    width: 700px;
+    float:left;
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+.p1points, .p2points, .p3points, .p4points {
+    float:right;
+    width:100px;
+}
+.points {
+    float:left;
+}
+img {
+    border-radius: 50%;
+    height: 100px;
+}
+.points {
+    text-align:center;
+    width:800px;
+}
+footer {
+    clear: left;
+    font-size: 13px;
+    text-align:center;
+}
+

@@ -1,0 +1,106 @@
+body {
+<<<<<<< HEAD
+    background-image: url("../img/background.jpg");
+=======
+    background-image: url("../img/background.jpeg");
+>>>>>>> d5e3923aa11acb7ad3574c96b4f16fa3dbc3d40e
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: white;
+}
+
+header {
+    text-align:center;
+    background-color:#6495ed;
+    font-size: 4em;
+    color: black;
+}
+
+.silverjack {
+    width: 800px;
+    overflow: auto;
+    padding: 20px 30px;
+    margin: auto;
+    text-align:center;
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+<<<<<<< HEAD
+
+/*.p0, .p1, .p2, .p3 {*/
+/*    text-align:left;*/
+/*    width: 700px;*/
+/*    float:left;*/
+/*    font-family: Comic Sans MS, cursive, sans-serif;*/
+/*    color: yellow;*/
+/*}*/
+
+.player {
+    text-align:left;
+=======
+.p1, .p2, .p3, .p4 {
+>>>>>>> d5e3923aa11acb7ad3574c96b4f16fa3dbc3d40e
+    width: 700px;
+    font-family: Comic Sans MS, cursive, sans-serif;
+    color: lime;
+}
+
+/*.p0points, .p1points, .p2points, .p3points {*/
+/*    float:right;*/
+/*    width:100px;*/
+/*    color: yellow;*/
+/*}*/
+
+.points {
+    float:right;
+    width:100px;
+    color: lime;
+}
+<<<<<<< HEAD
+
+/*.winnerPoints {*/
+/*    float:left;*/
+/*}*/
+
+/*img {*/
+/*    border-radius: 50%;*/
+/*    height: 100px;*/
+/*}*/
+
+div #avatar {
+=======
+.points {
+    float:left;
+}
+.profile {
+>>>>>>> d5e3923aa11acb7ad3574c96b4f16fa3dbc3d40e
+    border-radius: 50%;
+    height: 100px;
+    margin-right: 30px;
+}
+
+#logo {
+    width: 100px;
+}
+
+.winnerPoints {
+    float: left;
+    text-align:center;
+    width:800px;
+}
+
+footer {
+    clear: left;
+    font-size: 13px;
+    text-align:center;
+    color:white;
+}
+#logo {
+    height: 50px;
+    width: 50px;
+    float: center;
+}
+h3 {
+    color: white;    
+}
+
+
