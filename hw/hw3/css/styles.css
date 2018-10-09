@@ -1,0 +1,58 @@
+body {
+    background-image: url("../img/quiz.jpg");
+    background-size: cover;
+    color: white;
+}
+
+form {
+    border: 2px dashed white;
+    padding: 40px;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+p {
+    width: 700px;
+}
+
+#mainTitle {
+    font-size: 2.5em;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.error {
+    color: yellow;
+}
+
+.fail {
+    color: salmon;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 700px;
+    font-size: 2em;
+}
+
+.pass {
+    color: limegreen;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 700px;
+    font-size: 2em;
+}
+
+img {
+    border-radius: 10px;
+}
+
+#imgResult {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#submitBtn {
+    text-align: center;
+}
