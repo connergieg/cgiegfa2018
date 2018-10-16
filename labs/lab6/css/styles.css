@@ -1,0 +1,44 @@
+#main {
+    margin: 0 auto;
+    border: 4px solid #275399;
+    text-align: center;
+    width: 60%;
+}
+
+.orderBy {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+table {
+    margin: 0 auto;
+    width: 60%;
+}
+
+h3 {
+    text-align: center;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+input[type=submit] {
+    color: #275399;
+}
+
+a {
+    text-decoration: none;
+    color: #275399;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
