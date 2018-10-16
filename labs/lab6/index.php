@@ -1,6 +1,6 @@
 <?php
     include "../../../dbConnection.php";
-    $dbConn = getDatabaseConnection("ottermart");
+    $dbConn = getDatabaseConnection("heroku_523eb0bf3339a57");
     // Creating database connection
     // $host = "localhost";
     // $dbname = "ottermart";
