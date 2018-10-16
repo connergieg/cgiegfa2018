@@ -1,6 +1,6 @@
 <?php
     include "../../../dbConnection.php";
-    $dbConn = getDatabaseConnection("heroku_523eb0bf3339a57");
+    $dbConn = getDatabaseConnection("ottermart");
     
     function displayPurchase() {
         global $dbConn;
