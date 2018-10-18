@@ -1,0 +1,12 @@
+#productName {
+    font-size: 25px;
+}
+
+#purchaseHistory {
+    width: 30%; 
+    margin-left: 250px; 
+    background-color: mediumpurple; 
+    border: 2px solid black; 
+    border-radius: 10px;
+    padding: 10px;
+}

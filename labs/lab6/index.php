@@ -152,7 +152,7 @@
         <?php
             if (!empty(filterProducts())) { ?>
                 <h3>Products Found:</h3>
-                <table>
+                <table id="productTable">
                     <tr>
                         <td></td>
                         <?php

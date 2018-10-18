@@ -8,35 +8,49 @@
         $productName = $_GET["productName"];
         $productImage = $_GET["productImage"];
         
-        $sql = "SELECT * FROM om_purchase
-                WHERE productId = :productId";
-        $namedParameters = array();
-        $namedParameters[":productId"] = $productId;
+        // $sql = "SELECT * FROM om_purchase
+        //         WHERE productId = :productId";
+        $sql = "SELECT * FROM om_product 
+        NATURAL LEFT JOIN om_purchase WHERE productId = $productId";
         $stmt = $dbConn->prepare($sql);
-        $stmt->execute($namedParameters);
+        $stmt->execute();
         
-        $records = $stmt->fetch(PDO::FETCH_ASSOC);
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC); // fetchAll returns an Array of Arrays
         // print_r($records);
         
-        if (!empty($records)) {
-            echo $productName . "<br>";
-            echo "<img src='$productImage' width='300'><br>";
-            echo "Purcase Date: " . $records["purchaseDate"] . "<br>";
-            echo "Unit Price: " . $records["unitPrice"] . "<br>";
-            echo "Quantity: " . $records["quantity"] . "<br>";
+        echo "<span id='productName'>$productName</span><br>";
+        echo "<img src='".$records[0]["productImage"]."' width='100'>";
+        
+        if (!empty($records[0]["purchaseId"])) {
+            echo "<table>";
+            echo "<tr>";
+            echo "<th>Quantity</th><th>Unit Price</th><th>Purchase Date</th>";
+            echo "</tr>";
+            foreach ($records as $record) {
+                echo "<tr>";
+                echo "<td>" . $record["quantity"] . "</td>";
+                echo "<td>" . $record["unitPrice"] . "</td>";
+                echo "<td>" . $record["purchaseDate"] . "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
         } else {
-            echo "$productName - Not purchased";
+            echo "<h3>Product hasn't been purchased</h3>";
         }
+        
     }
-    
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title> </title>
+        <title>Purchase History</title>
+        <link rel="stylesheet" href="css/styles2.css" type="text/css" />
     </head>
     <body>
-        <?=displayPurchase()?>
+        <h1>Purchase History</h1>
+        <div id="purchaseHistory">
+            <?=displayPurchase()?>
+        </div>
     </body>
 </html>
