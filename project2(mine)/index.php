@@ -164,5 +164,6 @@
                 displaySportPlayers();
             }
         ?>
+        </table>
     </body>
 </html>
