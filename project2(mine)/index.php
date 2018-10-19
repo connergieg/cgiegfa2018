@@ -62,7 +62,7 @@
                 $selected = selectCategory($record["catId"]);
             }
             
-            echo "<option value='".$record["catId"]."' ".$selected.">".$record["catName"] . "</option>";
+            echo "<option value='".$record['catId']."' ".$selected.">".$record['catName'] . "</option>";
             $i++;
         }
     }
