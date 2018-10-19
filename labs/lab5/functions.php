@@ -24,8 +24,7 @@
                 echo "<input type='hidden' name='itemId' value='$itemId'>";
                 if ($_POST["itemId"] == $itemId) {
                     echo "<td><button class='btn btn-success'>Added</button></td>";
-                }
-                else {
+                } else {
                     echo "<td><button class='btn btn-warning'>Add</button></td>";
                 }
                 echo "</form>";

@@ -1,0 +1,14 @@
+main, #output {
+    text-align: center;
+    border-radius: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: lightpink;
+}
+
+input[type=number]{
+    width: 50px;
+}
