@@ -115,7 +115,7 @@
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
             // print_r($records);
             if (empty($records)) {
-                echo "<span class='error'>Player not found. Try again<span><br>";
+                echo "<span class='error'>Player not found. Try again</span><br>";
             } else {
                 foreach ($records as $record) {
                     $itemId = $record["playerId"];
