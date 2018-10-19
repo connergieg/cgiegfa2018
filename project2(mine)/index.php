@@ -153,7 +153,7 @@
             Sport: 
             <select name="catId">
                 <option value="">- None -</option>
-                <?= displayCategories() ?>
+                <!--<?= displayCategories() ?>-->
             </select>
             <input type="submit" name="submit" value="Submit">
         </form> <br>
