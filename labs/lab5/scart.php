@@ -44,7 +44,9 @@
                         </div>
                         <ul class='nav navbar-nav'>
                             <li><a href='index.php'>Home</a></li>
-                            <li><a href='scart.php'>Cart</a></li>
+                            <li><a href='scart.php'>
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            Cart <?= displayCartCount() ?></a></li>
                         </ul>
                     </div>
                 </nav>

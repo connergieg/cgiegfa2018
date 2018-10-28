@@ -6,3 +6,38 @@
     font-size: 20px;
     color: red;
 }
+
+.warning {
+    font-size: 20px;
+    color: orange;
+}
+
+.added {
+    color: green;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+th {
+    text-align: left;
+}
+
+#clickSubmit {
+    font-style: italic;
+}
+
+#cart {
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+#cart td {
+    border-bottom: 1px solid #ddd;
+}
+
+#purchaseProd {
+    float: right;
+}
