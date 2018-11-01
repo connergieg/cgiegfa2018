@@ -1,0 +1,68 @@
+h1, h3, form, #products {
+    margin-left: 50px;
+}
+
+#deleteForm {
+    margin-left: 0px;
+    display: inline-block;
+}
+
+.jumbotron {
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:0px;
+    margin-bottom:20px;
+    color: #002a4e;
+}
+
+#goBack {
+    margin-top: 30px;
+}
+
+.error, #logout {
+    color: red;
+}
+
+.add {
+    color: green;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#update, #delete {
+    text-decoration: none;
+}
+
+#update:hover, #delete:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.admin {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+#addProduct {
+    color: purple;
+}
+
+#products {
+    border: 1px solid #002a4e;
+    width: 600px;
+    background-color: #e9ecef;
+}
+
+.prodInfo {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+}
+
+#prodName {
+    margin-left: 0px;
+    font-style: italic;
+}
