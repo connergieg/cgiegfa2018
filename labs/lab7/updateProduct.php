@@ -26,13 +26,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
     </head>
-    <body>
+    <body class="navy">
         <form action="admin.php">
             <button id="goBack">Go Back</button>
         </form>
-        <h1> Update Product </h1>
+        <h1 class="yellow"> Update Product </h1>
         
-        <form>
+        <form class="yellow">
            <input type="hidden" name="prodId" value="<?=$_GET["prodId"]?>">    
            Product name: <input type="text" name="productName" value="<?=$record['productName']?>"><br>
            Description: <textarea name="description" cols="50" rows="4"><?=trim($record['productDescription'])?></textarea><br>
