@@ -1,5 +1,5 @@
 <?php
-    include "../../../dbConnection.php";
+    include "../../inc/dbConnection.php";
     $dbConn = getDatabaseConnection("ottermart");
     
     function validateSession() {
@@ -57,7 +57,7 @@
             <button type='submit'>Delete</button>
             </form>";
             echo " <a onclick='openModal()' target='productModal' href='productInfo.php?prodId=$productId'>$productName</a>";
-            echo " " . $productPrice . "<hr>";
+            echo " $" . $productPrice . "<hr>";
         }
     }
     
