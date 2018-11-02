@@ -54,7 +54,7 @@
             // echo "[<a id='delete' href='deleteProduct.php?prodId=$productId&prodName=$productName'>Delete</a>] ";
             echo "<form id='deleteForm' action='deleteProduct.php' onsubmit='return confirmDelete()'>
             <input type='hidden' name='prodId' value='$productId'>
-            <button type='submit'>Delete</button>
+            <button type='submit' class='btn btn-outline-warning'>Delete</button>
             </form>";
             echo " <a onclick='openModal()' target='productModal' href='productInfo.php?prodId=$productId'>$productName</a>";
             echo " $" . $productPrice . "<hr>";
