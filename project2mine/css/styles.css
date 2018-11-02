@@ -1,0 +1,107 @@
+body {
+    margin-top: 25px;
+    text-align: center;
+    background-image: url("../img/sport-background.jpg");
+}
+
+main {
+    background-color: rgba(255,255,255,0.6);
+    padding-top: 25px;
+    width: 500px;
+    margin: 0 auto;
+    font-size: 1.25em;
+}
+
+.main2 {
+    background-color: rgba(255,255,255,0.85);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+}
+
+.main2 #emptyCart {
+    text-align: left;
+}
+
+.main2 #purchaseProd {
+    text-align: right;
+}
+
+.main2 #clearHist {
+    text-align: left;
+}
+
+#playersTable {
+    font-size: 1.25em;
+}
+
+#cartButton {
+    font-size: 2em;
+}
+
+#cartPreview {
+    float: right;
+    font-size: 0.8em;
+}
+
+ul li {
+    list-style-type: square;
+}
+
+form {
+    clear: right;
+}
+
+table {
+    margin-top: 15px;
+    padding-bottom: 25px;
+}
+
+/*.button {*/
+/*    display: inline-block;*/
+/*}*/
+
+.error {
+    font-size: 20px;
+    color: red;
+}
+
+.warning {
+    font-size: 20px;
+    color: orange;
+}
+
+.added {
+    color: green;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+th {
+    text-align: left;
+}
+
+#clickSubmit {
+    font-style: italic;
+}
+
+.cart {
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.cart td {
+    border-bottom: 1px solid #ddd;
+}
+
+.noHistory {
+    text-align: center;
+    color: red;
+}
+
+input[type=number]{
+    width: 50px;
+} 
