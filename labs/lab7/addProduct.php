@@ -36,6 +36,6 @@
            Set Image Url: <input type="text" name="productImage"><br><br>
            <input type="submit" name="submitProduct" value="Add Product">
         </form>
-        <?= insertNewProduct(); ?>
+        <?php insertNewProduct(); ?>
     </body>
 </html>
