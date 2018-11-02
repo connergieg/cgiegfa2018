@@ -10,12 +10,12 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
     </head>
     
-    <body>
+    <body class="navy">
         <div class="jumbotron">
            <h1>Ottermart - Admin Login</h1> 
         </div>
         
-        <form method="POST" action="loginProcess.php">
+        <form class="yellow" method="POST" action="loginProcess.php">
             Username: <input type="text" name="username" value="<?=$_SESSION['username']?>"><br>
             Password: <input type="password" name="password" value="<?=$_SESSION['password']?>"><br>
             <?php
