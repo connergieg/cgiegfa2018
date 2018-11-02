@@ -1,5 +1,5 @@
 <?php
-    include "../../dbConnection.php";
+    include "../../inc/dbConnection.php";
     $dbConn = getDatabaseConnection("ottermart");
     // Creating database connection
     // $host = "localhost";
