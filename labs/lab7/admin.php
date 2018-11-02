@@ -21,23 +21,27 @@
     </head>
     
     <body>
-        <div class="jumbotron">
-            <h1>ADMIN SECTION - OTTERMART</h1>
-            <h3>Welcome <?= $_SESSION["adminFullName"] ?></h3>
-        </div>
+        <div class="navy">
+            <div class="jumbotron">
+                <h1>ADMIN SECTION - OTTERMART</h1>
+                <h3>Welcome <?= $_SESSION["adminFullName"] ?></h3>
+            </div>
         
-        <form class="admin" action="addProduct.php">
-            <input class="add" type="submit" value="Add Product">
-        </form>
-        
-        <form class="admin" action="logout.php">
-            <input id="logout" type="submit" value="Logout">
-        </form>
-        <br><br>
-        
-        <div id="products">
-        <hr>
-        <?= displayAllProducts() ?>
+            <form class="admin" action="addProduct.php">
+                <!--<input class="add" type="submit" value="Add Product">-->
+                <button type="submit" class="btn btn-outline-success">Add Product</button>
+            </form>
+            
+            <form class="admin" action="logout.php">
+                <!--<input id="logout" type="submit" value="Logout">-->
+                <button type="submit" class="btn btn-outline-danger">Logout</button>
+            </form>
+            <br><br>
+            
+            <div id="products">
+            <hr>
+            <?= displayAllProducts() ?>
+            </div>
         </div>
         
         <!-- Modal -->
