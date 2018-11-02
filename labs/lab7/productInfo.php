@@ -1,6 +1,10 @@
 <?php
     include "inc/functions.php";
-    $product = getProductInfo();
+    if (isset($_GET["prodId"])) {
+        $product = getProductInfo();
+    } else {
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
