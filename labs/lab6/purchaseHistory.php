@@ -1,5 +1,5 @@
 <?php
-    include "../../dbConnection.php";
+    include "../../inc/dbConnection.php";
     $dbConn = getDatabaseConnection("ottermart");
     
     function displayPurchase() {
