@@ -1,3 +1,15 @@
+.navy {
+    background-color: #002a4e;
+}
+
+iframe {
+    background-color: white;
+}
+
+.yellow {
+    color: yellow;
+}
+
 h1, h3, form, #products {
     margin-left: 50px;
 }
@@ -54,6 +66,7 @@ a {
     border: 1px solid #002a4e;
     width: 600px;
     background-color: #e9ecef;
+    color: black;
 }
 
 .prodInfo {
@@ -65,4 +78,12 @@ a {
 #prodName {
     margin-left: 0px;
     font-style: italic;
+}
+
+.btn-outline-warning {
+    color: blue;
+}
+
+.btn-outline-warning:hover {
+    color: blue;
 }
