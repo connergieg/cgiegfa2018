@@ -83,5 +83,5 @@
         $link .= "&sortBy=".$_GET["sortBy"];
     }
     $link .= "&addAll=1";
-    // header("Location: ".$link);
+    header("Location: ".$link);
 ?>
