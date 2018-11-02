@@ -1,5 +1,5 @@
 <?php
-    include "../../dbConnection.php";
+    include "../../inc/dbConnection.php";
     $dbConn = getDatabaseConnection("c9");
     
     function displayCategories() {
@@ -84,8 +84,7 @@
                 color: red;
             }
             #quotes {
-                text-align: left;
-                width: 500px;
+                width: 600px;
                 margin: auto;
             }
         </style>
@@ -110,7 +109,13 @@
         </form><br>
         
         <div id="quotes">
-        <?= displayQuotes(); ?>
+        <?php
+            if (!empty($_GET["keyword"]) || !empty($_GET["category"])) {
+                displayQuotes(); 
+            } else {
+                echo "<h3 class='error'>Enter keyword or category or both</h3>";
+            }
+        ?>
         </div>
     </body>
 </html>
