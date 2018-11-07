@@ -179,7 +179,7 @@
                 }
             }
         }
-        echo $sql;
+        // echo $sql;
         if (!empty($sql)) {
             // echo $sql."<br>";
             $stmt = $dbConn->prepare($sql);
