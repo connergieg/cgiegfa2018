@@ -76,8 +76,13 @@ function decideMatchResult() {
 		reason = "Scissors tie with scissors";
 		result = "Tie";
 	} else {
+		reason = "";
 		result = "Undecided try again";
 	}
-	$("#matchResult").append(reason+"<br>"+result);
+	$("#matchResult").append(reason);
+	if (reason != "") {
+		$("#matchResult").append("<br>");
+	}
+	$("#matchResult").append(result);
 }
 
