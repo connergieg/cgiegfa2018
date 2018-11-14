@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>RPS</title>
+		<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="rps.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script language="javascript" type="text/javascript" src="rps.js"></script>
+		
+		<script>
+			var playerCount = 0;
+			var computerCount = 0;
+			
+			$(document).ready(function() {
+				$("#reset").hide();
+				$("#btnGo").click(function() {
+					index = Math.floor(Math.random() * rps.length);
+					computerChoice = getComputerChoice();
+					document.getElementById("imgComputer").src = "images/"+computerChoice+".png";
+					console.log("player choice: "+playerChoice);
+					console.log("computer choice: "+computerChoice);
+					decideMatchResult();
+					$("#playerCount").html("Count: "+playerCount);
+					$("#computerCount").html("Count: "+computerCount);
+					console.log("player count: "+playerCount);
+					console.log("computer count: "+computerCount);
+					if (playerCount == 2 || computerCount == 2) {
+						playerCount = 0;
+						computerCount = 0;
+						$("#matchResult").append(" the game!!!");
+						$("#resetSection").html("<form><button type='submit' id='reset'>Reset Game</button></form>");
+					}
+					
+					document.getElementById("matchResult").style.border = "2px solid #333333";
+					$("#btnGo").hide();
+					$(".iconButton").hide();
+					$("#reset").show();
+				});
+				
+				$("#reset").click(function() {
+					playerChoice = undefined;
+					computerChoice = undefined;
+					document.getElementById("imgPlayer").setAttribute("src","images/question.png");
+					document.getElementById("imgComputer").setAttribute("src","images/question.png");
+					document.getElementById("matchResult").innerHTML = "";
+					document.getElementById("matchResult").style.border = "none";
+					document.getElementById("reset").style.display = "none";
+					$(".iconButton").show();
+					document.getElementById("btnGo").style.display = "block";
+				});
+				
+				$("#btnStart").click(function() {
+					// alert("clicked");
+					$("#introScreen").hide();
+				});
+			});
+		</script>
+	</head>
+	<body onload="init()">
+		<h1 id="mainTitle">RPS: First to 2 wins</h1>
+		<div id="gameWindow">
+			<div id="introScreen">
+				<div id="introScreenContent">
+					<h1>Rock, Paper, Scissors</h1>
+					<button id="btnStart" class="button">Start Game</button>
+				</div>
+			</div>
+			<div id="btnGo">Play</div>
+
+			<div id="playerPanel">
+				<h2>Player</h2>
+				<h2 id="playerCount">Count: 0</h2>
+				<img id="imgPlayer" src="images/question.png">
+				<br><br>
+				<div id="btnRock" class="iconButton" onclick="selectRock()">
+					<img src="images/rock.png">
+					<br>Rock
+				</div>
+				<div id="btnPaper" class="iconButton" onclick="selectPaper()">
+					<img src="images/paper.png">
+					<br>Paper
+				</div>
+				<div id="btnScissors" class="iconButton" onclick="selectScissors()">
+					<img src="images/scissors.png">
+					<br>Scissors
+				</div>
+			</div>
+			
+			<div id="resetSection">
+				<button type="submit" id="reset">Next Game</button>
+			</div>
+			<h2 id="matchResult"></h2>
+			
+			<div id="computerPanel">
+				<h2>Computer</h2>
+				<h2 id="computerCount">Count: 0</h2>
+				<img id="imgComputer" src="images/question.png">
+				<br><br>
+				<!--<div id="lblRock" class="iconLabel">-->
+				<!--	<img src="images/rock.png">-->
+				<!--	<br>Rock-->
+				<!--</div>-->
+				<!--<div id="lblPaper" class="iconLabel">-->
+				<!--	<img src="images/paper.png">-->
+				<!--	<br>Paper-->
+				<!--</div>-->
+				<!--<div id="lblScissors" class="iconLabel">-->
+				<!--	<img src="images/scissors.png">-->
+				<!--	<br>Scissors-->
+				<!--</div>-->
+			</div>
+		</div>
+	</body>
+</html>
+

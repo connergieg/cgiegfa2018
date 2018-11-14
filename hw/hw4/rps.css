@@ -1,0 +1,147 @@
+#gameWindow{
+	position: relative;
+	margin: 0 auto;
+	width: 600px;
+	border: 2px solid black;
+	height: 400px;
+	background-color: #DDDDDD;
+}
+
+#introScreen {
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	background-color: black;
+	z-index: 2;
+}
+
+#introScreenContent {
+	width: 400px;
+	height: 200px;
+	padding: 20px;
+	background-color: white;
+	margin: 80 auto;
+	text-align: center;
+}
+
+.button {
+	padding: 10px;
+	border-radius: 10px;
+	width: 100px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+	background-color: blue;
+	color: white;
+	margin: 0 auto;
+}
+
+#mainTitle {
+	text-align: center;
+	font-family: "Rock Salt";
+	color: limegreen;
+	font-size: 2em;
+	-webkit-text-fill-color: limegreen; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+#playerPanel{
+	position: absolute;
+	left: 40px;
+	top: 20px;
+}
+
+#computerPanel{
+	position: absolute;
+	left: 360px;
+	top: 20px;
+}
+
+#imgComputer, #imgPlayer{
+	width: 200px;
+}
+
+h2{
+	/*text-align: center;*/
+	text-align: left;
+	margin-top: 0px;
+	color: maroon;
+}
+
+#playerCount, #computerCount {
+	margin-bottom: 0px;
+}
+
+.iconButton{
+	display: inline-block;
+	margin: 3px;
+	padding: 4px;
+	border-radius: 5px;
+	width: 48px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 10pt;
+	background-color: silver;
+}
+
+.iconButton img{
+	width: 22px;
+}
+
+.iconButton:hover{
+	color: white;
+}
+
+.iconLabel{
+	display: inline-block;
+	margin: 3px;
+	padding: 4px;
+	border-radius: 5px;
+	width: 48px;
+	text-align: center;
+	font-size: 10pt;
+	border: 1px solid black;
+	background-color: #EEEEEE;
+}
+
+.iconLabel img{
+	width: 22px;
+}
+
+#btnGo, #reset{
+	position: absolute;
+	left: 260px;
+	top: 270px;
+	padding: 10px;
+	border-radius: 20px;
+	width: 50px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 14pt;
+	background-color: #0CA619;
+	color: white;
+}
+
+#reset {
+	left: 220px;
+	width: 150px;
+}
+
+#matchResult {
+	position: relative;
+	z-index: 1;
+	color: black;
+	background-color: red;
+	border-radius: 10px;
+	width: 300px;
+	margin: auto;
+	text-align: center;
+	top: 180px;
+}
+
+#btnGo:hover{
+	background-color: #0CC819;
+}
