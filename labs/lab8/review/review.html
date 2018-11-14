@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Review</title>
+        
+        <script>
+            function $(elementId) {
+                return document.getElementById(elementId);
+            }
+            
+            function doMagic() {
+                // alert("hi");
+                document.getElementById("catImage").src = "img/now_you_dont.png";
+                $("catImage").src = "img/now_you_dont.png";
+                document.getElementById("message").innerHTML = "Now you don't...";
+                document.getElementById("message").style.color = "red";
+                document.getElementById("doMagic").style.display = "none"; // hides button
+                document.getElementById("doMagic").style.display = "none";
+                document.getElementById("reappear").style.display = "inline";
+            }
+            
+            function reappear() {
+                document.getElementById("catImage").src = "img/now_you_see_me.png";
+                document.getElementById("message").innerHTML = "Now you see me...";
+                document.getElementById("message").style.color = "black";
+                document.getElementById("doMagic").style.display = "inline";
+                document.getElementById("reappear").style.display = "none";
+            }
+        </script>
+        
+        <style>
+            #reappear {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <img src="img/now_you_see_me.png" id="catImage">
+        
+        <h2 id="message"> Now you see me... </h2>
+        
+        <button id="doMagic" onclick="doMagic()">Do Magic</button>
+        <button id="reappear" onclick="reappear()">Reappear!</button>
+        
+    </body>
+</html>

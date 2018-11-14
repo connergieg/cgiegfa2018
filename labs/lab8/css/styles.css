@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+#man {
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+}
