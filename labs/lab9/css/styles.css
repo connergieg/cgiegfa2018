@@ -1,0 +1,48 @@
+h1 {
+    background-color: aqua;
+    color: red;
+    width: 800px;
+    text-align: center;
+}
+legend {
+    font-style: italic;
+    background-color: yellow;
+    width: 100px;
+    text-align: center;
+}
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-radius: 5px;
+}
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-radius: 5px;
+}
+.green {
+    color: green;
+}
+.space {
+    padding-bottom: 20px;
+}
+form {
+    background-color: palegreen;
+    width: 800px;
+    border-radius: 20px;
+    padding: 20px;
+}
+table {
+    margin: auto;
+}
+body {
+    margin-left: 20px;
+}
+#passwordMatchError {
+    position: relative;
+    left: 200px;
+}
+button {
+    position: relative;
+    left: 350px;
+}

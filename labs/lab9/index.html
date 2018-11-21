@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AJAX: Sign Up Page</title>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <script>
+            function validateForm() {
+                console.log("form submitted");
+                var username = $("#username").val();
+                var password = $("#password").val();
+                var passwordAgain = $("#passwordAgain").val();
+                
+                if (username.length < 5) {
+                    $("#usernameCheck").html("");
+                    $("#usernameError").html(" Error: Username must be at least 5 characters long");
+                }
+                
+                if (password.length < 3 && passwordAgain.length < 3) {
+                    $("#passwordError").html(" Error: Password must be at least 3 characters long");
+                } else {
+                    $("#passwordError").html("");
+                }
+                
+                // console.log(username);
+                // console.log(password);
+                // console.log(passwordAgain);
+                
+                if (password != passwordAgain) {
+                    $("#passwordMatchError").html("Error: Passwords must match please try again");
+                } else {
+                    $("#passwordMatchError").html("");
+                }
+                
+                return false;
+           
+            }
+            
+            $(document).ready(function() {
+                $("#zip").change(function() {
+                    console.log("zip changed");
+                    var zip = $("#zip").val();
+                    if (zip == "") {
+                        // alert("Empty zip");
+                        $("#zipError").html("");
+                        $("#city").html("");
+                        $("#latitude").html("");
+                        $("#longitude").html("");
+                    } else {
+                        $.ajax({
+                            type: "GET",
+                            url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
+                            dataType: "JSON",
+                            data: { "zip": zip },
+                            success: function(data,status) {
+                                // alert(data.city);
+                                if (data == false) {
+                                    $("#zipError").html(" Zip code not found");
+                                    $("#city").html("");
+                                    $("#latitude").html("");
+                                    $("#longitude").html("");
+                                } else {
+                                    $("#zipError").html("");
+                                    $("#city").html(data.city);
+                                    $("#latitude").html(data.latitude);
+                                    $("#longitude").html(data.longitude);
+                                }
+                            },
+                            complete: function(data,status) { //optional, used for debugging purposes
+                            //alert(status);
+                            }
+                        });//ajax
+                    }
+                });//zipEvent
+                
+                $("#state").change(function() {
+                    console.log("state changed");
+                    $.ajax({
+                        type: "GET",
+                        url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
+                        dataType: "JSON",
+                        data: { "state": $("#state").val() },
+                        success: function(data,status) {
+                            // alert(data[0].county);
+                            $("#county").html("<option>Select One</option>");
+                            for (var i = 0; i < data.length; i++) {
+                                $("#county").append("<option>"+data[i].county+"</option>");
+                            }
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                        });//ajax
+                });//stateEvent
+                
+                $("#username").change(function() {
+                    console.log("username changed");
+                    var username = $("#username").val();
+                    if (username.length < 5) {
+                        $("#usernameCheck").html("");
+                        $("#usernameError").html(" Error: Username must be at least 5 characters long");
+                    } else {
+                        $.ajax({
+                            type: "GET",
+                            url: "checkUsernameAPI.php",
+                            dataType: "JSON",
+                            data: { "username": username },
+                            success: function(data,status) {
+                                // alert(data);
+                                if (data != false) {
+                                    $("#usernameCheck").attr("class","error");
+                                    $("#usernameCheck").html(" Username is taken");
+                                } else {
+                                    $("#usernameCheck").attr("class","success");
+                                    $("#usernameCheck").html(" Username is available");
+                                }
+                            },
+                            complete: function(data,status) { //optional, used for debugging purposes
+                            //alert(status);
+                            }
+                        });//ajax
+                        $("#usernameError").html("");
+                    }
+                });//usernameEvent
+            });//documentReady
+        </script>
+
+    </head>
+
+    <body>
+    
+       <h1> Sign Up Form </h1>
+    
+        <form onsubmit="return validateForm()">
+            <fieldset>
+               <legend>Sign Up</legend>
+               <table>
+                <tr>
+                   <td>First Name:</td><td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td><td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td><td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td class="space">Phone Number:</td><td class="space"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Zip Code:</td><td><input type="text" id="zip">
+                    <span id="zipError" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>City:</td><td><span id="city" class="green"></span></td>
+                </tr>
+                <tr>
+                    <td>Latitude:</td><td><span id="latitude" class="green"></span></td>
+                </tr>
+                <tr>
+                    <td class="space">Longitude:</td><td class="space"><span id="longitude" class="green"></span></td>
+                </tr>
+                <tr>
+                    <td>State:</td>
+                    <td>
+                        <select id="state">
+                            <option value="">Select One</option>
+                            <option value="ca"> California</option>
+                            <option value="ny"> New York</option>
+                            <option value="tx"> Texas</option>
+                            <option value="va"> Virginia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select a County:</td>
+                    <td><select id="county"></select></td>
+                </tr>
+                <tr>
+                    <td>Desired Username:</td>
+                    <td>
+                        <input id="username" type="text">
+                        <span id="usernameCheck"></span>
+                        <span id="usernameError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" id="password">
+                        <span id="passwordError" class="error"></span>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>Type Password Again:</td>
+                    <td>
+                        <input type="password" id="passwordAgain">
+                    </td>
+                </tr>
+                </table>
+                <span id="passwordMatchError" class="error"></span>
+                <hr>
+                <button type="submit" class="btn btn-primary">Sign Up!</button>
+            </fieldset>
+            
+        </form>
+    
+    </body>
+</html>
