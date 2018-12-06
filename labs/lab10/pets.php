@@ -48,7 +48,7 @@
                             $("#petImg").attr("src","img/"+data.pictureURL);
                             $("#petImg").css("float","left");
                             $("#petAge").html("<strong>Age: </strong>");
-                            $("#petAge").append(data.age);
+                            $("#petAge").append(data.age+" year(s) old");
                             $("#petBreed").html("<strong>Breed: </strong>");
                             $("#petBreed").append(data.breed);
                             $("#petDesc").html(data.description);
