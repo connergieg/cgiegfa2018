@@ -29,7 +29,8 @@
             $price = $record["price"];
             echo "<div id='prod$id'><button class='update btn btn-secondary' id='$id'>Update</button> ";
             echo "<button class='delete btn btn-warning' id='$id'>Delete</button> ";
-            echo "<img src='$img' width='100'> | <a href='#' class='prodName' id='$id'>$name</a> | $console | $$price"."</div><br><hr><br>";
+            echo "<a href='#' class='prodName' id='$id'><img src='$img' width='100'></a>
+            | <a href='#' class='prodName' id='$id'>$name</a> | $console | $$price"."</div><br><hr><br>";
         }
     }
 ?>

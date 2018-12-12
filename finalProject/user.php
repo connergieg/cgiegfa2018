@@ -46,7 +46,8 @@
                         $console = "<img src='img/ps4Logo.png' width='100'>";
                     }
                     $price = $record["price"];
-                    echo "<img src='$img' width='100'> | <a href='#' class='prodName' id='$id'>$name</a> | $console | $$price <br><hr><br>";
+                    echo "<a href='#' class='prodName' id='$id'><img src='$img' width='100'></a> 
+                    | <a href='#' class='prodName' id='$id'>$name</a> | $console | $$price <br><hr><br>";
                 }
             }
         }
@@ -154,11 +155,11 @@
                     $.ajax({
                         type: "POST",
                         url: "updateProductViews.php",
-                        dataType: "",
+                        dataType: "json",
                         data: { "id": id },
                         success: function(data,status) {
                         //alert(data);
-                        
+                            $("#productViews").html("<br>Product view count: "+data.views);
                         },
                         complete: function(data,status) { //optional, used for debugging purposes
                         //alert(status);
@@ -212,6 +213,7 @@
                     <span id="productGenre"></span>
                     <span id="productConsole"></span>
                     <span id="productPrice"></span>
+                    <span id="productViews"></span>
                 </div>
                 <!--<p>Modal body text goes here.</p>-->
               </div>
