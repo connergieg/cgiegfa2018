@@ -56,6 +56,7 @@
             if (!isset($_SESSION["username"])) { ?>
             <div id="main">
                 <h1>Admin Login</h1><br>
+                <p>(Username: admin / Password: secret)</p>
                 <form method="POST" action="validateLogin.php" id="login">
                     Username <input type="text" name="username"><br>
                     Password <input type="password" name="password">
